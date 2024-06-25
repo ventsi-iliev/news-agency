@@ -1,0 +1,25 @@
+.three-categories-samples {
+  &__wrapper {
+    margin-top: 2rem;
+    display: grid;
+
+    @include min-650 {
+      & {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5rem;
+      }
+    }
+
+    h5 {
+       margin-bottom: 10px;
+    }
+
+    .column-1,
+    .column-2,
+    .column-3 {
+      .article:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+}

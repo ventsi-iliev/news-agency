@@ -1,0 +1,20 @@
+.feature-c,
+.feature-d {
+  &__wrapper {
+    margin-top: 2.5rem;
+    display: grid;
+
+    @media (orientation: landscape) {
+      & {
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1rem;
+      }
+    }
+  }
+
+  // Main
+  &__main {
+    padding-right: 1rem;
+    border-right: 1px solid $light-gray-color;
+  }
+}

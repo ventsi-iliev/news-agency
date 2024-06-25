@@ -1,0 +1,149 @@
+// Article
+.article {
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid $light-gray-color;
+
+  &.no-border {
+    border-bottom: 0;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: 700;
+
+    &.remove-bold {
+      font-weight: 500;
+    }
+  }
+
+  h2,
+  h3 {
+    margin-bottom: 10px;
+    font-family: $serif;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  h2.h2-alternative-1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  h3 {
+    font-size: 22px;
+    line-height: 24px;
+  }
+
+  h3.h3-alternative-1 {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  h4 {
+    margin-bottom: 7px;
+  }
+
+  .meta {
+    font-size: 12px;
+    font-weight: 300;
+    font-family: $sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+
+
+  p {
+    font-family: $sans-serif;
+  }
+
+  p:not(.exclusive-tag) {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  // Excslusive tag
+  .exclusive-tag {
+    border: 1px solid $black-color;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 11px;
+  }
+
+  // Live link
+  .live-link {
+    margin: 10px 0 0 0;
+    padding-left: 1.5rem;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-color: $dark-gray-color-2;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+  }
+
+  // Article info
+  .article-info {
+    & > * {
+      display: inline-block;
+      margin-left: 10px;
+      color: $dark-gray-color-2;
+    }
+  }
+
+  // created at
+  .created_at {
+    color: $red-color;
+    font-weight: normal;
+  }
+}
+
+// Image wrapper
+.asset__wrapper {
+  position: relative;
+  padding-top: 66%;
+
+  & > *:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+  }
+
+  img, video {
+    flex-grow: 1;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  & + * {
+    margin-top: 15px;
+  }
+}
+
+// Chevron icon
+.chevron-icon--right {
+  display: inline-block;
+  margin-left: 6px;
+}

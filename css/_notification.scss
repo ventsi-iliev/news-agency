@@ -1,0 +1,42 @@
+.notification {
+  &__wrapper {
+    position: fixed;
+    top: 56px;
+    min-height: 55px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    z-index: $above-header;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    padding: 1rem;
+
+    &.show-notifications {
+      pointer-events: all;
+      opacity: 1;
+    }
+
+    @media (min-width: 1240px) {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  // Content
+  &__content {
+    position: relative;
+    padding-left: 1rem;
+    display: flex;
+    justify-content: center;
+
+    i {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 17px;
+    }
+  }
+}

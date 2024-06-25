@@ -1,0 +1,65 @@
+//
+// Plain orientation
+//
+@mixin portrait-and-lanscape {
+    @media(orientation: portrait), (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin landscape {
+    @media(orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin portrait {
+    @media(orientation: portrait) {
+        @content;
+    }
+}
+
+//
+// Sizes
+//
+@mixin portrait-max-650 {
+    @media(orientation: portrait) and (max-width: 650px) {
+        @content;
+    }
+}
+
+@mixin landscape-max-850 {
+    @media(orientation: landscape) and (max-width: 850px) {
+        @content;
+    }
+}
+
+@mixin landscape-min-1240 {
+    @media (orientation: landscape) and (min-width: 1240px) {
+        @content;
+    }
+}
+
+@mixin landscape-max-1239 {
+    @media (orientation: landscape) and (max-width: 1239px) {
+        @content;
+    }
+}
+
+@mixin min-650 {
+    @media (min-width: 650px) {
+        @content;
+    }
+}
+
+@mixin min-1240 {
+    @media(min-width: 1240px) {
+        @content;
+    }
+}
+
+@mixin max-1239 {
+    @media (max-width: 1239px) {
+        @content;
+    }
+}

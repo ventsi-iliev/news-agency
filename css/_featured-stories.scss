@@ -1,0 +1,29 @@
+.featured-stories {
+  &__wrapper {
+    display: grid;
+
+    .article-info {
+      * {
+        margin: 0;
+      }
+    }
+
+    @include portrait-max-650 {
+      .article {
+        border-bottom: 1px solid $light-gray-color;
+
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+    }
+
+    @include min-650 {
+      & {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        padding: 2rem 0 1rem;
+      }
+    }
+  }
+}
