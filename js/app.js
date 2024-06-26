@@ -67,7 +67,6 @@ tabs.addEventListener("click", (e) => {
 
   if (!div.classList.contains("active-tab")) {
     const id = div.id;
-    alert(id);
     const getRestOfTabs = tabs.querySelectorAll(`div:not(#${id})`);
     getRestOfTabs.forEach((tab) => tab.classList.remove("active-tab"));
 

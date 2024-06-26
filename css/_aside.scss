@@ -51,6 +51,17 @@ aside {
         }
       }
 
+      @include landscape {
+        .hide-asset-on-landscape .asset__wrapper {
+          display: none !important;
+          padding-top: 0 !important;
+        }
+      }
+
+      h5:not(.heading) {
+        margin-top: 0 !important;
+      }
+
       .author {
         font-style: italic;
         font-size: 13px !important;
@@ -108,7 +119,6 @@ aside {
           z-index: $sticky-banner;
         }
       }
-
     }
   }
 
@@ -209,7 +219,6 @@ aside {
         display: inline-block;
         padding: 15px;
         padding-left: 0;
-
       }
 
       div {

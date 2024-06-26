@@ -686,6 +686,15 @@ aside {
 .aside-opinions__wrapper h5.heading a:hover {
   color: #867256;
 }
+@media (orientation: landscape) {
+  .aside-opinions__wrapper .hide-asset-on-landscape .asset__wrapper {
+    display: none !important;
+    padding-top: 0 !important;
+  }
+}
+.aside-opinions__wrapper h5:not(.heading) {
+  margin-top: 0 !important;
+}
 .aside-opinions__wrapper .author {
   font-style: italic;
   font-size: 13px !important;
@@ -858,7 +867,7 @@ aside {
 .search__wrapper.show-search__wrapper {
   display: block;
 }
-.search__wrapper i {
+.search__wrapper > i {
   position: absolute;
   top: 2%;
   right: 5%;
