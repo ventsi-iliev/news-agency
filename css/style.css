@@ -1014,6 +1014,10 @@ aside {
   padding: 1rem;
   font-family: "Retina Narrow", Retina, "Arial Narrow", Arial, Helvetica, sans-serif;
   font-size: 13px;
+  text-align: center;
+}
+.footer__gdpr p.copyright {
+  padding-top: 0.8rem;
 }
 .footer__gdpr ul {
   max-width: 1200px;
