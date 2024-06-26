@@ -116,7 +116,7 @@
       position: relative;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0%;
         left: 0;
@@ -147,9 +147,8 @@
       }
     }
   }
-  
+
   .main-header {
-    // height: 56px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -157,6 +156,12 @@
     top: 0;
     left: 0;
     right: 0;
+
+    .hamburger-icon {
+      .close-menu {
+        display: none;
+      }
+    }
 
     h1 {
       margin: 0;
@@ -202,14 +207,13 @@
 
     &.show-mobile-menu {
       position: fixed;
-      top: 56px;
       left: 0;
       bottom: 0;
       min-width: 100%;
       z-index: $above-header;
       display: block !important;
       padding: 1rem;
-      background-color: $light-gray-color-3;
+      background-color: $light-gray-color-4;
       box-shadow: 0 2px 3px #0000004d;
 
       animation: showMenu 0.15s ease-in-out forwards;

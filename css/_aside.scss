@@ -45,6 +45,10 @@ aside {
       h5.heading {
         padding-top: 0;
         color: $gold-color;
+
+        a:hover {
+          color: darken($gold-color, 10%);
+        }
       }
 
       .author {
