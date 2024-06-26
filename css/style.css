@@ -616,6 +616,13 @@
   font-family: "Retina Narrow", Retina, "Arial Narrow", Arial, Helvetica, sans-serif;
   font-weight: 500;
 }
+.feature-c__heading h5 a {
+  display: flex;
+  align-items: center;
+}
+.feature-c__heading h5 a:hover {
+  color: #3d635f;
+}
 .feature-c__heading small {
   font-size: 12px;
   font-weight: 300;
