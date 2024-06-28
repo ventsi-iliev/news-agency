@@ -1,0 +1,36 @@
+.article__actions {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+
+  button {
+    all: unset;
+    cursor: pointer;
+  }
+
+  button,
+  a {
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    font-family: $sans-serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 13px;
+    margin-right: 6px;
+
+    &:hover {
+      background-color: $light-gray-color-4;
+      color: $blue-color;
+    }
+
+    span {
+      display: inline-block;
+      padding-left: 6px;
+
+      &:nth-of-type(2) {
+        font-weight: normal;
+      }
+    }
+  }
+}

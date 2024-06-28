@@ -1,0 +1,30 @@
+.article__heading {
+  padding: 12px 0;
+
+  h1 {
+    font-family: $serif;
+    margin-bottom: 10px;
+
+    & + h2 {
+      line-height: 24px;
+      font-family: $sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      color: $dark-gray-color-2;
+    }
+
+    @include max-1239 {
+      & {
+        font-size: 33px;
+        line-height: 33px;
+      }
+    }
+
+    @include landscape-min-1240 {
+      & {
+        font-size: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+}

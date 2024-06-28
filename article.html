@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Апелъ</title>
+
+    <style>
+      @font-face {
+        font-family: "Retina";
+        src: url("./fonts/Retina-Book.woff2") format("woff2"),
+          url("./fonts/Retina-Book.woff") format("woff");
+        font-style: normal;
+        font-weight: 400;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Retina";
+        src: url("./fonts/Retina-BookItalic.woff2") format("woff2"),
+          url("./fonts/Retina-BookItalic.woff") format("woff");
+        font-style: italic;
+        font-weight: 400;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Retina";
+        src: url("./fonts/Retina-Light.woff2") format("woff2"),
+          url("./fonts/Retina-Light.woff") format("woff");
+        font-style: normal;
+        font-weight: 300;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Retina";
+        src: url("./fonts/Retina-LightItalic.woff2") format("woff2"),
+          url("./fonts/Retina-LightItalic.woff") format("woff");
+        font-style: italic;
+        font-weight: 300;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Retina";
+        src: url("./fonts/Retina-Medium.woff2") format("woff2"),
+          url("./fonts/Retina-Medium.woff") format("woff");
+        font-style: normal;
+        font-weight: 500;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Retina";
+        src: url("./fonts/Retina-MediumItalic.woff2") format("woff2"),
+          url("./fonts/Retina-MediumItalic.woff") format("woff");
+        font-style: italic;
+        font-weight: 500;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Retina Narrow";
+        src: url("./fonts/RetinaNarr-Light.woff2") format("woff2"),
+          url("./fonts/RetinaNarr-Light.woff") format("woff");
+        font-style: normal;
+        font-weight: 300;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Retina Narrow";
+        src: url("./fonts/RetinaNarr-LightItalic.woff2") format("woff2"),
+          url("./fonts/RetinaNarr-LightItalic.woff") format("woff");
+        font-style: italic;
+        font-weight: 300;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Retina Narrow";
+        src: url("./fonts/RetinaNarr-Book.woff2") format("woff2"),
+          url("./fonts/RetinaNarr-Book.woff") format("woff");
+        font-style: normal;
+        font-weight: 400;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Retina Narrow";
+        src: url("./fonts/RetinaNarr-BookItalic.woff2") format("woff2"),
+          url("./fonts/RetinaNarr-BookItalic.woff") format("woff");
+        font-style: italic;
+        font-weight: 400;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Retina Narrow";
+        src: url("./fonts/RetinaNarr-Medium.woff2") format("woff2"),
+          url("./fonts/RetinaNarr-Medium.woff") format("woff");
+        font-style: normal;
+        font-weight: 500;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Retina Narrow";
+        src: url("./fonts/RetinaNarr-MediumItalic.woff2") format("woff2"),
+          url("./fonts/RetinaNarr-MediumItalic.woff") format("woff");
+        font-style: italic;
+        font-weight: 500;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Retina Narrow";
+        src: url("./fonts/RetinaNarr-Bold.woff2") format("woff2"),
+          url("./fonts/RetinaNarr-Bold.woff") format("woff");
+        font-style: normal;
+        font-weight: 700;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Retina Narrow";
+        src: url("./fonts/RetinaNarr-BoldItalic.woff2") format("woff2"),
+          url("./fonts/RetinaNarr-BoldItalic.woff") format("woff");
+        font-style: italic;
+        font-weight: 700;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Escrow Condensed";
+        src: url("./fonts/Escrow+Display+Condensed+Bold.woff2") format("woff2"),
+          url("./fonts/Escrow+Display+Condensed+Bold.woff") format("woff");
+        font-style: normal;
+        font-weight: 700;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Escrow Condensed";
+        src: url("./fonts/Escrow+Display+Condensed+Bold+Italic.woff2")
+            format("woff2"),
+          url("./fonts/Escrow+Display+Condensed+Bold+Italic.woff")
+            format("woff");
+        font-style: italic;
+        font-weight: 700;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Escrow Condensed";
+        src: url("./fonts/Escrow+Display+Condensed+Roman.woff2") format("woff2"),
+          url("./fonts/Escrow+Display+Condensed+Roman.woff") format("woff");
+        font-style: normal;
+        font-weight: 400;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Escrow Condensed";
+        src: url("./fonts/Escrow+Display+Condensed+Italic.woff2")
+            format("woff2"),
+          url("./fonts/Escrow+Display+Condensed+Italic.woff") format("woff");
+        font-style: italic;
+        font-weight: 400;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Exchange";
+        src: url("./fonts/Exchange-Book.woff2") format("woff2"),
+          url("./fonts/Exchange-Book.woff") format("woff");
+        font-style: normal;
+        font-weight: 400;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Exchange";
+        src: url("./fonts/Exchange-BookItalic.woff2") format("woff2"),
+          url("./fonts/Exchange-BookItalic.woff") format("woff");
+        font-style: italic;
+        font-weight: 400;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Exchange";
+        src: url("./fonts/Exchange-Medium.woff2") format("woff2"),
+          url("./fonts/Exchange-Medium.woff") format("woff");
+        font-style: normal;
+        font-weight: 500;
+        font-display: optional;
+      }
+
+      @font-face {
+        font-family: "Exchange";
+        src: url("./fonts/Exchange-MediumItalic.woff2") format("woff2"),
+          url("./fonts/Exchange-MediumItalic.woff") format("woff");
+        font-style: italic;
+        font-weight: 500;
+        font-display: optional;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/article.css" />
+  </head>
+  <body>
+    <!-- Search wrapper -->
+    <section class="search__wrapper">
+      <form action="" method="GET">
+        <label for="search-input">Търси</label>
+        <input type="text" id="search-input" placeholder="Потърси..." />
+        <button type="submit" disabled>
+          <span>Търси</span>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <i class="fa-solid fa-xmark close-search__wrapper"></i>
+    </section>
+
+    <!-- Notification wrapper -->
+    <section class="notification__wrapper">
+      <div class="notification__content">
+        <p>Няма нови уведомления</p>
+        <i class="fa-solid fa-xmark close-notification-icon"></i>
+      </div>
+    </section>
+
+    <header class="main-header">
+      <div class="site-name__wrapper">
+        <h1 class="site-name"><a href=""> Апелъ </a></h1>
+        <div class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <ul class="menu">
+        <li><a href="#">Последни</a></li>
+        <li class="menu-item__has-dropdown">
+          <a href="">Свят</a>
+          <div class="menu-item__dropdown">
+            <div>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="menu-item__has-dropdown">
+          <a href="">Бизнес</a>
+          <div class="menu-item__dropdown">
+            <div>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="menu-item__has-dropdown">
+          <a href="">У нас</a>
+          <div class="menu-item__dropdown">
+            <div>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="menu-item__has-dropdown">
+          <a href="">Политика</a>
+          <div class="menu-item__dropdown">
+            <div>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="menu-item__has-dropdown">
+          <a href="">Иконимика</a>
+          <div class="menu-item__dropdown">
+            <div>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Джорд Оруел</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="menu-item__has-dropdown">
+          <a href="">Технология</a>
+          <div class="menu-item__dropdown">
+            <div>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="menu-item__has-dropdown">
+          <a href="">Финанси</a>
+          <div class="menu-item__dropdown">
+            <div>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="menu-item__has-dropdown">
+          <a href="">Мнения</a>
+          <div class="menu-item__dropdown">
+            <div>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="menu-item__has-dropdown">
+          <a href="">Култура</a>
+          <div class="menu-item__dropdown">
+            <div>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+                <li><a href="">Филосифия</a></li>
+                <li><a href="">Музика</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="menu-item__has-dropdown">
+          <a href="">Здравеопазване</a>
+          <div class="menu-item__dropdown">
+            <div>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Свят</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Филосифия</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="menu-item__has-dropdown">
+          <a href="">Мода</a>
+          <div class="menu-item__dropdown">
+            <div>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Музика</a></li>
+              </ul>
+              <ul>
+                <li class="category"><a href="">Категория</a></li>
+                <li><a href="">Образование</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Mobile menu -->
+      <ul class="mobile-menu">
+        <li>У нас</li>
+        <li>Финанси</li>
+      </ul>
+
+      <div class="mobile-actions">
+        <div class="hamburger-icon">
+          <i class="fa-solid fa-bars"></i>
+
+          <i class="fa-solid fa-xmark close-menu"></i>
+        </div>
+        <div class="notifications-icon">
+          <i class="fa-solid fa-bell"></i>
+
+          <span></span>
+        </div>
+        <h1><a href=""> | Апелъ </a></h1>
+        <div class="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <ul class="mobule-menu"></ul>
+      <div class="mobile-tabs">
+        <div class="active-tab tab" id="tab__accents">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            aria-hidden="true"
+            focusable="false"
+            role="img"
+            class="wpds-c-fBqPWp wpds-c-fBqPWp-ieUXbwY-css"
+          >
+            <path
+              d="M2.32 8 2 8.32V14h5v-4h2v4h5V8.32L13.68 8 8 1.63M13 13h-3V9H6v4H3V8.75L8 3l5 5.75Z"
+            ></path>
+          </svg>
+          <span>Акценти</span>
+        </div>
+        <div class="tab" id="tab__latest">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            aria-hidden="true"
+            focusable="false"
+            role="img"
+            class="wpds-c-fBqPWp wpds-c-fBqPWp-ieUXbwY-css"
+          >
+            <path
+              d="M8 1a7 7 0 1 0 5 2.05A7 7 0 0 0 8 1m0 13a6 6 0 1 1 4.24-1.76A6 6 0 0 1 8 14"
+              data-name="Path 18"
+            ></path>
+            <path
+              d="M7.5 4.23v4l3.5 2.14.52-.85-3-1.8V4.23Z"
+              data-name="Path 19"
+            ></path>
+          </svg>
+          <span>Последни</span>
+        </div>
+        <div class="tab" id="tab__for-you">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            aria-hidden="true"
+            focusable="false"
+            role="img"
+            class="wpds-c-fBqPWp wpds-c-fBqPWp-ieUXbwY-css"
+          >
+            <path
+              d="m12.667 7.417-.778 1.536-1.556.797 1.556.778.778 1.555.777-1.555L15 9.75l-1.556-.778zM4.5 8l-1.167 2.304L1 11.5l2.333 1.167L4.5 15l1.167-2.333L8 11.5l-2.333-1.167zM8 1 6.833 3.304 4.5 4.5l2.333 1.167L8 8l1.167-2.333L11.5 4.5 9.167 3.333z"
+            ></path>
+          </svg>
+          <span>За вас</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main wrapper -->
+    <div class="document__wrapper--article">
+      <main class="main-section--article">
+        <div class="article__categories">
+          <a href="">Бизнесс</a>
+          <span>&#124;</span>
+          <a href="">Енергия & Горива</a>
+        </div>
+        <div class="article__heading">
+          <h1>Започват преговорите на Украйна и Молдова за членство в ЕС</h1>
+          <h2>
+            На пътя към членството ще застанат не само усилията на Русия за
+            дестабилизация, но и резервираността на съмняващите се в ЕС
+          </h2>
+        </div>
+        <div class="article__actions">
+          <button type="button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              alt=""
+              role="img"
+            >
+              <defs>
+                <path
+                  id="arrow-share-stroke-medium_svg__a"
+                  d="M13.913 2.363l8.215 6.61v1.224l-8.215 6.914-.893-.652.893-3.816H8.901c-2.598 0-4.301 2.656-4.202 4.623.098 1.966.831 3.187 2.052 3.98l-.424.677C4.423 20.74 1.983 17.927 1.825 14.5c-.157-3.426 1.902-7.94 6.854-7.934l5.234-.005-.893-3.602.893-.597zm.763 2.035l.642 3.333-6.89-.144c-4.222-.005-5.74 4.4-5.669 6.622.062 1.185.46 3.008 1.133 4.102.288.333-.345-1.286.276-3.13a5.184 5.184 0 014.776-3.534l6.374-.197-.642 3.543 5.766-5.022v-.786l-5.766-4.787z"
+                ></path>
+              </defs>
+              <use
+                fill="currentColor"
+                fill-rule="evenodd"
+                xlink:href="#arrow-share-stroke-medium_svg__a"
+              ></use></svg
+            ><span>Сподели</span>
+          </button>
+
+          <a href="#comments_sector"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <defs>
+                <path
+                  id="comment-stroke-medium_svg__a"
+                  d="M20 3a2 2 0 012 2v11.21a2 2 0 01-2 2h-8.518L7.085 22H6.014v-3.79H4a2 2 0 01-2-2V5a2 2 0 012-2h16zm0 1H4a1 1 0 00-.993.883L3 5v11.21a1 1 0 00.883.994L4 17.21h3.014v3.529l4.097-3.53H20a1 1 0 00.993-.883L21 16.21V5a1 1 0 00-.883-.993L20 4z"
+                ></path>
+              </defs>
+              <use
+                fill="currentColor"
+                fill-rule="evenodd"
+                xlink:href="#comment-stroke-medium_svg__a"
+              ></use></svg
+            ><span class="css-12tlu99">119</span></a
+          >
+
+          <button type="button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              overrides="[object Object]"
+              class="css-y5tzo"
+            >
+              <defs>
+                <path
+                  id="headphones-stroke-medium_svg__a"
+                  d="M12 4a6 6 0 00-6 6v2h1v9H4v-1a2 2 0 01-2-2v-3a2 2 0 012-2v-1h1v-2a7 7 0 1114 0v2h1v1a2 2 0 012 2v3a2 2 0 01-2 2v1h-3v-9h1v-2a6 6 0 00-6-6zm-6 9H5v7h1v-7zm13 0h-1v7h1v-7zM4 14l-.117.007a1 1 0 00-.876.876L3 15v3a1 1 0 00.883.993L4 19v-5zm16 0v5l.117-.007a1 1 0 00.876-.876L21 18v-3a1 1 0 00-.883-.993L20 14z"
+                ></path>
+              </defs>
+              <use
+                fill="currentColor"
+                fill-rule="evenodd"
+                xlink:href="#headphones-stroke-medium_svg__a"
+              ></use>
+            </svg>
+            <span>Слушай</span>
+            <span>(1 минута)</span>
+          </button>
+        </div>
+
+        <div class="article__asset">
+          <div>
+            <img
+              src="https://images.wsj.net/im-973349?width=700&size=1.5005861664712778"
+              alt=""
+            />
+          </div>
+          <p>Представиха първия регистриран автомобил на водород у нас</p>
+        </div>
+
+        <div class="article__content">
+          <p>
+            Сред основните предимства при водородните електромобили е тяхната
+            ресурсна устойчивост. Това каза доц. Благой Бурдин от Института по
+            електрохимия и енергийни системи (ИЕЕС) към Българската академия на
+            науките (БАН), който представи първия регистриран в страната
+            водороден електромобил.
+          </p>
+          <p>
+            Автомобилът бе представен в двора на Професионалната гимназия по
+            транспорт и транспортен мениджмънт в Казанлък, предаде
+            кореспондентът на БГНЕС в региона.
+          </p>
+          <p>
+            Сред основните предимства на електромобила е че няма намаляване на
+            пробега при тежки зимни условия. Зареждането на автомобила става с
+            водород при налягане до 700 бара. При комерсиална станция
+            автомобилът се зарежда за около три минути, а пробегът е между 500 и
+            600 километра.
+          </p>
+          <p>
+            Друго предимство на машината е, че почти всичко се рециклира
+            напълно, няма голяма и тежка батерия.
+          </p>
+          <p>
+            Основно предизвикателство пред по-масовото навлизане на водородната
+            електромобилност са зарядните станции. В момента в страната има само
+            една, тя е част от Центъра по компетентност „Хитмобил. Има регламент
+            за разгръщането на инфраструктурата за алтернативни горива, според
+            който до 2030 година по основната пътна мрежа и на всеки градски
+            възел в държавите членки на Европейския съюз трябва да бъде
+            изградена такава инфраструктура, което ще бъде една значителна и
+            важна крачка за по-бързото разгръщане на този тип транспорт, каза
+            доц. Бурдин. I БГНЕС
+          </p>
+        </div>
+
+        <div class="article__secondary-content">
+          <h2>Прочети още</h2>
+
+          <article class="next-article">
+            <div class="next-article__meta">
+              <span>Бизнесс</span>
+              <h3>Как да развием бизнес</h3>
+              <p>26 юни, 2024</p>
+            </div>
+            <div class="next-article__content">
+              <div class="next-article__asset">
+                <img src="https://images.wsj.net/im-972356/social" alt="" />
+              </div>
+              <div class="next-article__content--text">
+                <p>
+                  Основно предизвикателство пред по-масовото навлизане на
+                  водородната електромобилност са зарядните станции.
+                </p>
+                <button type="button">
+                  Виж статията
+                  <i class="fa-solid fa-chevron-right chevron-icon--right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="next-article">
+            <div class="next-article__meta">
+              <span>Бизнесс</span>
+              <h3>Как да развием бизнес</h3>
+              <p>26 юни, 2024</p>
+            </div>
+            <div class="next-article__content">
+              <div class="next-article__asset">
+                <img src="https://images.wsj.net/im-972356/social" alt="" />
+              </div>
+              <div class="next-article__content--text">
+                <p>
+                  Основно предизвикателство пред по-масовото навлизане на
+                  водородната електромобилност са зарядните станции.
+                </p>
+                <button type="button">
+                  Виж статията
+                  <i class="fa-solid fa-chevron-right chevron-icon--right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="next-article">
+            <div class="next-article__meta">
+              <span>Бизнесс</span>
+              <h3>Как да развием бизнес</h3>
+              <p>26 юни, 2024</p>
+            </div>
+            <div class="next-article__content">
+              <div class="next-article__asset">
+                <img src="https://images.wsj.net/im-972356/social" alt="" />
+              </div>
+              <div class="next-article__content--text">
+                <p>
+                  Основно предизвикателство пред по-масовото навлизане на
+                  водородната електромобилност са зарядните станции.
+                </p>
+                <button type="button">
+                  Виж статията
+                  <i class="fa-solid fa-chevron-right chevron-icon--right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="next-article">
+            <div class="next-article__meta">
+              <span>Бизнесс</span>
+              <h3>Как да развием бизнес</h3>
+              <p>26 юни, 2024</p>
+            </div>
+            <div class="next-article__content">
+              <div class="next-article__asset">
+                <img src="https://images.wsj.net/im-972356/social" alt="" />
+              </div>
+              <div class="next-article__content--text">
+                <p>
+                  Основно предизвикателство пред по-масовото навлизане на
+                  водородната електромобилност са зарядните станции.
+                </p>
+                <button type="button">
+                  Виж статията
+                  <i class="fa-solid fa-chevron-right chevron-icon--right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="next-article">
+            <div class="next-article__meta">
+              <span>Бизнес</span>
+              <h3>Как да развием бизнес</h3>
+              <p>26 юни, 2024</p>
+            </div>
+            <div class="next-article__content">
+              <div class="next-article__asset">
+                <img src="https://images.wsj.net/im-972356/social" alt="" />
+              </div>
+              <div class="next-article__content--text">
+                <p>
+                  Основно предизвикателство пред по-масовото навлизане на
+                  водородната електромобилност са зарядните станции.
+                </p>
+                <button type="button">
+                  Виж статията
+                  <i class="fa-solid fa-chevron-right chevron-icon--right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+          <article class="next-article">
+            <div class="next-article__meta">
+              <span>Бизнесс</span>
+              <h3>Как да развием бизнес</h3>
+              <p>26 юни, 2024</p>
+            </div>
+            <div class="next-article__content">
+              <div class="next-article__asset">
+                <img src="https://images.wsj.net/im-972356/social" alt="" />
+              </div>
+              <div class="next-article__content--text">
+                <p>
+                  Основно предизвикателство пред по-масовото навлизане на
+                  водородната електромобилност са зарядните станции.
+                </p>
+                <button type="button">
+                  Виж статията
+                  <i class="fa-solid fa-chevron-right chevron-icon--right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </main>
+      <aside class="aside-section tab__for-you--content">
+        <div class="aside-content">
+          <!-- Main accents - sidebar -->
+          <section class="aside-main-accents__wrapper">
+            <article class="article no-border">
+              <div class="asset__wrapper">
+                <a href="">
+                  <img
+                    src="https://images.wsj.net/im-967384?width=287&height=191"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div>
+                <h3>
+                  <a href=""
+                    >Започват преговорите на Украйна и Молдова за членство в
+                    ЕС</a
+                  >
+                </h3>
+                <p>
+                  <span
+                    >На пътя към членството ще застанат не само усилията на
+                    Русия за дестабилизация, но и резервираността на съмняващите
+                    се в ЕС, най-вече на Унгария.</span
+                  >
+                  <span class="article-info">
+                    <a href="#"><i class="fa-regular fa-message"></i> 24</a>
+                    <i class="fa-regular fa-clock"></i> 5 минутно четиво
+                  </span>
+                </p>
+              </div>
+            </article>
+          </section>
+
+          <!-- Opinions -->
+          <section class="aside-opinions__wrapper feature">
+            <h5 class="heading">
+              <a href="">
+                Мнения
+                <i class="fa-solid fa-chevron-right chevron-icon--right"></i>
+              </a>
+            </h5>
+            <article class="article hide-asset-on-landscape">
+              <div class="asset__wrapper">
+                <a href="">
+                  <img
+                    src="https://images.wsj.net/im-967384?width=287&height=191"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h5>
+                <a href=""
+                  >Започват преговорите на Украйна и Молдова за членство в ЕС</a
+                >
+              </h5>
+              <p class="author">
+                От образователния борд | Оценка и перспектива
+              </p>
+            </article>
+            <article class="article hide-asset-on-landscape">
+              <div class="asset__wrapper">
+                <a href="">
+                  <img
+                    src="https://images.wsj.net/im-967384?width=287&height=191"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <h5>
+                <a href=""
+                  >Започват преговорите на Украйна и Молдова за членство в ЕС</a
+                >
+              </h5>
+              <p class="author">
+                От образователния борд | Оценка и перспектива
+              </p>
+            </article>
+            <article class="article">
+              <h5>
+                <a href=""
+                  >Започват преговорите на Украйна и Молдова за членство в ЕС</a
+                >
+              </h5>
+              <p class="author">
+                От образователния борд | Оценка и перспектива
+              </p>
+            </article>
+          </section>
+
+          <!-- Sticky aside banner section -->
+          <section class="aside-sticky-ad-banner">
+            <div class="asset__wrapper">
+              <a href="">
+                <img
+                  src="https://images.unsplash.com/photo-1559613671-dfe2fb6a7680?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt=""
+                />
+              </a>
+            </div>
+          </section>
+
+          <!-- Most popular news -->
+          <section
+            class="aside-most-popular-news__wrapper aside-feature-section"
+          >
+            <h5>Най-популярните новини</h5>
+            <article>
+              <span>1</span>
+              <div>
+                <div class="asset__wrapper">
+                  <a href="">
+                    <img
+                      src="https://images.unsplash.com/photo-1545156521-77bd85671d30?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                    />
+                  </a>
+                  <h3>
+                    <a href=""
+                      >Учени откриха нова екзопланета, годна за живот</a
+                    >
+                  </h3>
+                </div>
+              </div>
+            </article>
+            <article class="aside-feature-section__without-main-asset">
+              <span>2</span>
+              <div>
+                <h3>
+                  <a href="">Учени откриха нова екзопланета, годна за живот</a>
+                </h3>
+              </div>
+            </article>
+            <article class="aside-feature-section__without-main-asset">
+              <span>3</span>
+              <div>
+                <h3>
+                  <a href="">Учени откриха нова екзопланета, годна за живот</a>
+                </h3>
+              </div>
+            </article>
+            <article class="aside-feature-section__without-main-asset">
+              <span>4</span>
+              <div>
+                <h3>
+                  <a href="">Учени откриха нова екзопланета, годна за живот</a>
+                </h3>
+              </div>
+            </article>
+            <article class="aside-feature-section__without-main-asset">
+              <span>5</span>
+              <div>
+                <h3>
+                  <a href="">Учени откриха нова екзопланета, годна за живот</a>
+                </h3>
+              </div>
+            </article>
+          </section>
+
+          <!-- Most popular opinions -->
+          <section
+            class="aside-most-popular-opinions__wrapper aside-feature-section aside-feature-section__gold-accent"
+          >
+            <h5>Най-популярните мнения</h5>
+            <article>
+              <span>1</span>
+              <div>
+                <div class="asset__wrapper">
+                  <a href="">
+                    <img
+                      src="https://images.unsplash.com/photo-1545156521-77bd85671d30?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                    />
+                  </a>
+                  <h3>
+                    <a href=""
+                      >Учени откриха нова екзопланета, годна за живот</a
+                    >
+                  </h3>
+                </div>
+              </div>
+            </article>
+            <article class="aside-feature-section__without-main-asset">
+              <span>2</span>
+              <div>
+                <h3>
+                  <a href="">Учени откриха нова екзопланета, годна за живот</a>
+                </h3>
+              </div>
+            </article>
+            <article class="aside-feature-section__without-main-asset">
+              <span>3</span>
+              <div>
+                <h3>
+                  <a href="">Учени откриха нова екзопланета, годна за живот</a>
+                </h3>
+              </div>
+            </article>
+            <article class="aside-feature-section__without-main-asset">
+              <span>4</span>
+              <div>
+                <h3>
+                  <a href="">Учени откриха нова екзопланета, годна за живот</a>
+                </h3>
+              </div>
+            </article>
+            <article class="aside-feature-section__without-main-asset">
+              <span>5</span>
+              <div>
+                <h3>
+                  <a href="">Учени откриха нова екзопланета, годна за живот</a>
+                </h3>
+              </div>
+            </article>
+          </section>
+
+          <!-- Recommended videos -->
+          <section
+            class="aside-most-popular-opinions__wrapper aside-feature-section aside-feature-section__gold-accent"
+          >
+            <h5>Препоръчани видеа</h5>
+            <article>
+              <span>1</span>
+              <div>
+                <a href="">
+                  <div class="asset__wrapper">
+                    <video>
+                      <source type="video/mp4" src="./videos/feature-a.mp4" />
+                    </video>
+                    <h3>
+                      <a href=""
+                        >Учени откриха нова екзопланета, годна за живот</a
+                      >
+                      <span>
+                        <i class="fa-solid fa-play"></i>
+                        01:57
+                      </span>
+                    </h3>
+                  </div>
+                </a>
+              </div>
+            </article>
+            <article class="aside-feature-section__with-secondary-asset">
+              <span>2</span>
+              <div>
+                <h3>
+                  <a href="">Учени откриха нова екзопланета, годна за живот</a>
+                </h3>
+              </div>
+              <div class="aside-feature-section__asset">
+                <div class="asset__wrapper">
+                  <a href="">
+                    <img
+                      src="https://images.unsplash.com/photo-1545156521-77bd85671d30?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                    />
+                  </a>
+                  <h3>
+                    <span>
+                      <i class="fa-solid fa-play"></i>
+                      01:57
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </article>
+            <article class="aside-feature-section__with-secondary-asset">
+              <span>3</span>
+              <div>
+                <h3>
+                  <a href="">Учени откриха нова екзопланета, годна за живот</a>
+                </h3>
+              </div>
+              <div class="aside-feature-section__asset">
+                <div class="asset__wrapper">
+                  <a href="">
+                    <img
+                      src="https://images.unsplash.com/photo-1545156521-77bd85671d30?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                    />
+                  </a>
+                  <h3>
+                    <span>
+                      <i class="fa-solid fa-play"></i>
+                      01:57
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </article>
+            <article class="aside-feature-section__with-secondary-asset">
+              <span>4</span>
+              <div>
+                <h3>
+                  <a href="">Учени откриха нова екзопланета, годна за живот</a>
+                </h3>
+              </div>
+              <div class="aside-feature-section__asset">
+                <div class="asset__wrapper">
+                  <a href="">
+                    <img
+                      src="https://images.unsplash.com/photo-1545156521-77bd85671d30?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                    />
+                  </a>
+                  <h3>
+                    <span>
+                      <i class="fa-solid fa-play"></i>
+                      01:57
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </article>
+            <article class="aside-feature-section__with-secondary-asset">
+              <span>5</span>
+              <div>
+                <h3>
+                  <a href="">Учени откриха нова екзопланета, годна за живот</a>
+                </h3>
+              </div>
+              <div class="aside-feature-section__asset">
+                <div class="asset__wrapper">
+                  <a href="">
+                    <img
+                      src="https://images.unsplash.com/photo-1545156521-77bd85671d30?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                      alt=""
+                    />
+                  </a>
+                  <h3>
+                    <span>
+                      <i class="fa-solid fa-play"></i>
+                      01:57
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- Journal reports -->
+          <section class="feature feature-c__wrapper aside-non-feature-section">
+            <h5 class="heading bordered">
+              <a href="">
+                Репорти
+                <i class="fa-solid fa-chevron-right chevron-icon--right"></i>
+              </a>
+            </h5>
+            <article class="article aside-non-feature-section__main-accent">
+              <div class="asset__wrapper">
+                <a href="">
+                  <img
+                    src="https://images.wsj.net/im-972033?width=527&height=351"
+                    alt=""
+                  />
+                </a>
+              </div>
+              <div>
+                <div class="meta">Семейство и технологии</div>
+                <h3>
+                  <a href=""
+                    >Започват преговорите на Украйна и Молдова за членство в
+                    ЕС</a
+                  >
+                </h3>
+                <p>
+                  <span
+                    >На пътя към членството ще застанат не само усилията на
+                    Русия за дестабилизация, но и резервираността на съмняващите
+                    се в ЕС, най-вече на Унгария.</span
+                  >
+                  <span class="article-info">
+                    <a href="#"><i class="fa-regular fa-message"></i> 24</a>
+                    <i class="fa-regular fa-clock"></i> 5 минутно четиво
+                  </span>
+                </p>
+              </div>
+            </article>
+            <article class="article feature-below-a__secondary">
+              <h4>
+                <a href=""
+                  >Започват преговорите на Украйна и Молдова за членство в ЕС</a
+                >
+              </h4>
+              <p>
+                <span
+                  >На пътя към членството ще застанат не само усилията на Русия
+                  за дестабилизация, но и резервираността на съмняващите се в
+                  ЕС, най-вече на Унгария.</span
+                >
+                <span class="article-info">
+                  <a href="#"><i class="fa-regular fa-message"></i> 24</a>
+                  <i class="fa-regular fa-clock"></i> 5 минутно четиво
+                </span>
+              </p>
+            </article>
+            <article class="article feature-below-a__secondary no-border">
+              <h4>
+                <a href=""
+                  >Започват преговорите на Украйна и Молдова за членство в ЕС</a
+                >
+              </h4>
+              <p>
+                <span
+                  >На пътя към членството ще застанат не само усилията на Русия
+                  за дестабилизация, но и резервираността на съмняващите се в
+                  ЕС, най-вече на Унгария.</span
+                >
+                <span class="article-info">
+                  <a href="#"><i class="fa-regular fa-message"></i> 24</a>
+                  <i class="fa-regular fa-clock"></i> 5 минутно четиво
+                </span>
+              </p>
+            </article>
+          </section>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+      <div id="back-to-top">
+        Начало на страницата <i class="fa-solid fa-chevron-up"></i>
+      </div>
+      <div class="footer__top">
+        <div class="footer__top--content">
+          <div>
+            <h1>Апелъ</h1>
+          </div>
+
+          <!-- Menu items -->
+          <div class="footer__top--items">
+            <ul>
+              <li>
+                <strong>Членство</strong>
+              </li>
+              <li>
+                <a href="">Колекция</a>
+              </li>
+              <li>
+                <a href="">Опции за абонамент</a>
+              </li>
+              <li>
+                <a href="">Защо да се абонирате?</a>
+              </li>
+              <li>
+                <a href="">Корпоративни абонаменти</a>
+              </li>
+              <li>
+                <a href="">Програма за висше образование на WSJ</a>
+              </li>
+              <li>
+                <a href="">Програма за гимназия на WSJ</a>
+              </li>
+              <li>
+                <a href="">Програма на обществената библиотека</a>
+              </li>
+              <li>
+                <a href="">WSJ на живо</a>
+              </li>
+              <li>
+                <a href="">Търговски партньорства</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <strong>Обслужване на клиенти</strong>
+              </li>
+              <li>
+                <a href="">Потребителски център</a>
+              </li>
+              <li>
+                <a href="">Свържи се с нас</a>
+              </li>
+              <li>
+                <a href="">Отмени абонамент</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <strong>Инструменти и функции</strong>
+              </li>
+              <li>
+                <a href="">Бюлетини и сигнали</a>
+              </li>
+              <li>
+                <a href="">Ръководства</a>
+              </li>
+              <li>
+                <a href="">Теми</a>
+              </li>
+              <li>
+                <a href="">Моите новини</a>
+              </li>
+              <li>
+                <a href="">RSS емисии</a>
+              </li>
+              <li>
+                <a href="">Видео център</a>
+              </li>
+              <li>
+                <a href="">Списък за наблюдение</a>
+              </li>
+              <li>
+                <a href="">Подкасти</a>
+              </li>
+              <li>
+                <a href="">Визуални истории</a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <strong>Повече</strong>
+              </li>
+              <li>
+                <a href="">За нас</a>
+              </li>
+              <li>
+                <a href="">Партньорства за съдържание</a>
+              </li>
+              <li>
+                <a href="">Корекции</a>
+              </li>
+              <li>
+                <a href="">Работа в WSJ</a>
+              </li>
+              <li>
+                <a href="">Архив новини</a>
+              </li>
+              <li>
+                <a href="">Регистрирайте се безплатно</a>
+              </li>
+              <li>
+                <a href="">Препечатки и лицензиране</a>
+              </li>
+              <li>
+                <a href="">Сигнализирай проблем</a>
+              </li>
+              <li>
+                <a href="">Магазин</a>
+              </li>
+              <li>
+                <a href="">Пресцентър</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social links -->
+      <div class="footer__social-links">
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              href="https://www.facebook.com"
+              title="Facebook"
+              role="button"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              href="https://twitter.com"
+              title="Twitter"
+              role="button"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </li>
+
+          <li>
+            <a
+              target="_blank"
+              href="https://www.youtube.com/"
+              title="YouTube"
+              role="button"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+
+          <li>
+            <a target="_blank" href="#" title="Snapchat" role="button"
+              ><i class="fa-brands fa-snapchat"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- GDPR info -->
+      <div class="footer__gdpr">
+        <ul>
+          <li>
+            <a href="">Поверителност</a>
+          </li>
+          <li>
+            <a href="">Бисквитки</a>
+          </li>
+          <li>
+            <a href="">Управление на бисквитки</a>
+          </li>
+          <li>
+            <a href="">Авторски права</a>
+          </li>
+          <li>
+            <a href="">Условия за ползване</a>
+          </li>
+          <li>
+            <a href="">Достъпност</a>
+          </li>
+        </ul>
+
+        <p class="copyright">&copy; 2024 Тютюн</p>
+      </div>
+    </footer>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

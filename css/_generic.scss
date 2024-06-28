@@ -5,6 +5,12 @@
   margin-bottom: 1rem;
   border-bottom: 1px solid $light-gray-color;
 
+  @include min-1240 {
+    .show-on-mobile {
+      display: none;
+    }
+  }
+
   &.no-border {
     border-bottom: 0;
   }
@@ -57,7 +63,6 @@
     text-transform: uppercase;
     margin-bottom: 3px;
   }
-
 
   p {
     font-family: $sans-serif;
@@ -131,7 +136,8 @@
     display: flex;
   }
 
-  img, video {
+  img,
+  video {
     flex-grow: 1;
     object-fit: cover;
     width: 100%;

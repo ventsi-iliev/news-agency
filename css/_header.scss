@@ -10,7 +10,6 @@
 
   h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
     text-transform: uppercase;
   }
 
@@ -29,6 +28,7 @@
 
         & > li {
           padding: 7px;
+          font-size: 16px;
 
           &.menu-item__has-dropdown {
             a {
@@ -81,10 +81,11 @@
 
             li {
               padding: 5px;
-              font-size: 14px;
+              font-size: 16px;
 
               &.category {
                 font-weight: bold;
+                font-size: 17px;
               }
             }
 
@@ -104,6 +105,10 @@
     justify-content: center;
     width: 100%;
     padding: 1rem 0 0;
+
+    svg {
+      width: 23px;
+    }
 
     div {
       display: flex;
@@ -258,7 +263,7 @@
     }
   }
 
-  .site-name {
+  .site-name__wrapper {
     display: none;
   }
 
@@ -288,7 +293,15 @@
     display: none;
   }
 
-  .site-name {
-    display: block;
+  .site-name__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    div {
+      margin-left: 15px;
+      cursor: pointer;
+    }
   }
 }
