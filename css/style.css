@@ -1034,6 +1034,7 @@ footer #back-to-top {
   }
   .feature-below-a__grid .feature-below-a__secondary {
     grid-column: 2/3;
+    margin-bottom: 0;
   }
   .feature-below-a__grid .banner {
     grid-column: 3/4;
