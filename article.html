@@ -241,8 +241,15 @@
     <header class="main-header">
       <div class="site-name__wrapper">
         <h1 class="site-name"><a href=""> Апелъ </a></h1>
-        <div class="search-icon">
-          <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="search__wrapper--desktop">
+          <form action="" method="GET">
+            <label for="search-input">Търси</label>
+            <input type="text" id="search-input" placeholder="Потърси..." />
+            <button type="submit" disabled>
+              <span>Търси</span>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
         </div>
       </div>
       <ul class="menu">
@@ -1475,6 +1482,6 @@
       </div>
     </footer>
 
-    <script src="./js/app.js"></script>
+    <script src="./js/article.js"></script>
   </body>
 </html>

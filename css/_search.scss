@@ -1,3 +1,45 @@
+.search__wrapper--desktop {
+  form {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 6px;
+  }
+
+  label {
+    display: none;
+  }
+
+  input {
+    flex-grow: 1;
+    border: 1px solid $light-gray-color-2;
+    outline: none;
+    padding: 10px;
+    background-color: transparent;
+    width: 400px;
+  }
+
+  button {
+    background-color: #c8c8c8;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    padding: 5px 10px;
+    height: 100%;
+
+    &.active-search-button {
+      background-color: #0274b6;
+      cursor: pointer;
+    }
+
+    span {
+      text-transform: uppercase;
+      display: inline-block;
+      padding-right: 6px;
+    }
+  }
+}
+
 .search__wrapper {
   position: fixed;
   top: 0;

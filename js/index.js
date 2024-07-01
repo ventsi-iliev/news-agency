@@ -19,7 +19,9 @@ const hamburgerIcon = document.querySelector(".hamburger-icon");
 // Search
 const searchIcons = document.querySelectorAll(".search-icon");
 const searchWrapper = document.querySelector(".search__wrapper");
-const searchInput = document.querySelector(".search__wrapper input");
+const searchInput = document.querySelectorAll(
+  ".search__wrapper input, .search__wrapper--desktop input"
+);
 const searchButton = document.querySelector(
   '.search__wrapper button[type="submit"]'
 );
@@ -39,12 +41,20 @@ searchWrapper.addEventListener("click", (e) => {
   }
 });
 
-searchInput.addEventListener("input", (e) => {
-  if (e.target.closest("input").value !== "") {
-    searchButton.classList.add("active-search-button");
-  } else {
-    searchButton.classList.remove("active-search-button");
-  }
+searchInput.forEach((search) => {
+  search.addEventListener("input", (e) => {
+    if (e.target.closest("input").value !== "") {
+      e.target
+        .closest("form")
+        .querySelector('button[type="submit"]')
+        .classList.add("active-search-button");
+    } else {
+      e.target
+        .closest("form")
+        .querySelector('button[type="submit"]')
+        .classList.remove("active-search-button");
+    }
+  });
 });
 
 // Notifications
