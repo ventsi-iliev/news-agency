@@ -240,6 +240,41 @@
 
     <header class="main-header">
       <div class="site-name__wrapper">
+        <div id="weather-info">
+          <p>Вторник, 2 юли, 2024</p>
+          <div>
+            <img
+              style="height: 20px"
+              id="weather-image"
+              alt="Времето в снимкас"
+              src="https://www.meteobalkans.com/img/realistic-icons/d000.png"
+            />
+            <span id="temperature">22 °C</span>
+            <span style="display: none" id="city-name">София</span>
+            <label for="city-select" style="display: none">Изберете град</label>
+            <select
+              id="city-select"
+              style="
+                width: 76px;
+                background: transparent;
+                border: none;
+                font-size: 13px;
+                color: #5c5c5c;
+              "
+            >
+              <option style="font-weight: 600" value="sofia">София</option>
+              <option style="font-weight: 600" value="varna">Варна</option>
+              <option style="font-weight: 600" value="burgas">Бургас</option>
+              <option style="font-weight: 600" value="blagoevgrad">
+                Благоевград
+              </option>
+              <option style="font-weight: 600" value="plovdiv">Пловдив</option>
+              <option style="font-weight: 600" value="ruse">Русе</option>
+              <option style="font-weight: 600" value="vidin">Видин</option>
+            </select>
+            <span class="loader"></span>
+          </div>
+        </div>
         <h1 class="site-name"><a href=""> Апелъ </a></h1>
         <div class="search__wrapper--desktop">
           <form action="" method="GET">
@@ -1495,5 +1530,6 @@
     </footer>
 
     <script src="./js/article.js"></script>
+    <script src="./js/weather.js"></script>
   </body>
 </html>
