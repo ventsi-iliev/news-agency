@@ -293,8 +293,12 @@
     display: none;
   }
 
+  .site-name {
+    flex-grow: 1;
+  }
+
   .site-name__wrapper {
-    max-width: 800px;
+    max-width: 1024px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -304,6 +308,41 @@
     div {
       margin-left: 15px;
       cursor: pointer;
+    }
+  }
+}
+
+// Weather
+#weather-info {
+  div {
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-right: 25px;
+  }
+
+  .loader {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    width: 22px;
+    height: 22px;
+    border: 3px solid #333;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: translateY(-50%) rotate(0deg);
+    }
+    100% {
+      transform: translateY(-50%) rotate(360deg);
     }
   }
 }
